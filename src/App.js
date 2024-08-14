@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Login from './pages/login/Login';
+import Register from './pages/register/Register';
+import Watch from './pages/watch/Watch';
+import Home from './pages/home/Home';
+import { BrowserRouter as Router, Route, Routes,Navigate } from 'react-router-dom';
 
 function App() {
+  const user = true;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={user?<Home />:<Navigate to={'/register'}/>}/> 
+        <Route path="/register" element={<Register/>} />
+        <Route path="/login" element={<Login/>} />
+        {
+          user && 
+          <>
+            <Route path='/movies' element={<Home type={'movies'}/>}/>
+            <Route path='/series' element={<Home type={'series'}/>}/>
+            <Route path='/watch' element={<Watch/>}/>
+          </>
+        }
+      </Routes>
+    </Router>
   );
 }
 

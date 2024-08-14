@@ -1,0 +1,87 @@
+.register{
+    width: 100wh;
+    height: 100vh;
+    background:linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%),
+    url("https://assets.nflxext.com/ffe/siteui/vlv3/893a42ad-6a39-43c2-bbc1-a951ec64ed6d/54132fd3-9f3f-493f-9446-ae7c5cb42952/TZ-en-20231002-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+    // background-size: cover;
+    position: relative;
+
+    .top{
+
+        .wrapper{
+            padding: 20px 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .logo{
+                height: 40px;
+            }
+
+            .loginButton{
+                background-color: red;
+                border: none;
+                color: white;
+                border-radius: 5px;
+                padding: 10px 15px;
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+
+    }
+
+    .container{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+
+        h1{
+            font-size: 50px;
+        }
+        h2{
+            margin: 20px;
+        }
+        p{
+            font-size: 20px;
+        }
+
+        .input{
+            width: 50%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+            height: 50px;
+            border-radius: 5px;
+            
+
+            input{
+                flex: 9;
+                border: none;
+                height: 100%;
+                padding: 0 10px;
+            }
+
+
+            .registerButton{
+                flex: 3;
+                height: 100%;
+                background-color: red;
+                border: none;
+                color: white;
+                cursor: pointer;
+            }
+        }
+
+    }
+}
